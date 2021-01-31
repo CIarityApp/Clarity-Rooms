@@ -14,6 +14,6 @@ router.get('/rooms/:roomId', (req, res) => {
 app.use('/', router)
 
 const server = http.createServer(app)
-server.listen(8080, () => {
+server.listen(80, () => {
   console.log('Listening on http://localhost:' + 8080)
 })
