@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const http = require('http')
 
@@ -14,6 +15,6 @@ router.get('/rooms/:roomId', (req, res) => {
 app.use('/', router)
 
 const server = http.createServer(app)
-server.listen(8080, () => {
-  console.log('Listening on http://localhost:' + 8080)
+server.listen(process.env.PORT, () => {
+  console.log('Listening on http://localhost:' + process.env.PORT)
 })
